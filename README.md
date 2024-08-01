@@ -73,7 +73,7 @@ Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
 
 3. Download, extract & run Mauve:
 
-    There are two ways you can do this: one, download from the website and two, use 'wget' to download it directly.
+    There are two ways you can do this: one, download from the website and two, use 'wget' to download it directly from your terminal.
 
     **Way one:** Download a tarball from the Download page.
 
