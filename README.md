@@ -100,6 +100,18 @@ Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
     ```bash
     ./mauve
     ```
+# Genome Alignment: Ecoli BL21 (Reference), OSB 1 and OSB 2
+
+We use Mauve to align the 3 sequences, one being the reference sequence of E coli BL21 downloaded from the NCBI. Based on the NCBI search hits, we choose to use the E coli BL21 sequenced and submitted by New England Biolabs. 
+-Organism: Escherichia coli
+-Infraspecific name: Strain: BL21 
+-Submitter: New England Biolabs
+-Date: May 26, 2020
+-Assembly level: Complete Genome
+-Genome representation: full
+-GenBank assembly accession: GCA_013166975.1
+-RefSeq assembly accession: GCF_013166975.1 
+ 
 # Gene Annotation & Transfer
 
 Gene annotations were obtained using in-house Python codes to “map and transfer” annotations of *E. coli* BL21 (taken from the NCBI), which were then used as feed for genome alignment software “Mauve”. Information from the genome alignments generated from Mauve (Reference *E. coli* BL21, OSB1, and OSB2) were incorporated into the algorithm while mapping the genes onto the full genome sequences of OSB1 and OSB2. [Check the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/4_annotation_transfer)
