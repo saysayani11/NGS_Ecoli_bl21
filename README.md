@@ -1,5 +1,14 @@
 # E. coli BL21: Introduction
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Genetic Features](#genetic-features)
+    - [T7 RNA Polymerase and T7 Expression System](#t7-rna-polymerase-and-t7-expression-system)
+    - [Lacking Lon and OmpT Proteases](#lacking-lon-and-ompt-proteases)
+    - [Transformation Efficiency and Genetic Manipulation](#transformation-efficiency-and-genetic-manipulation)
+    - [Growth Characteristics](#growth-characteristics)
+3. [Applications](#applications)
+
 ## 1. Overview
 E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein expression due to their genetic features. These strains lack proteolytic activity and have a T7 RNA polymerase gene controlled by the lacUV5 promoter.
 
