@@ -95,9 +95,9 @@ Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
     ```
 # Gene Annotation & Transfer
 
-Gene annotations were obtained using in-house Python codes to “map and transfer” annotations of *E. coli* BL21 (taken from the NCBI), which were then used as feed for genome alignment software “Mauve”. Information from the genome alignments generated from Mauve (Reference *E. coli* BL21, OSB1, and OSB2) were incorporated into the algorithm while mapping the genes onto the full genome sequences of OSB1 and OSB2. (Check the files here)[https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/4_annotation_transfer]
+Gene annotations were obtained using in-house Python codes to “map and transfer” annotations of *E. coli* BL21 (taken from the NCBI), which were then used as feed for genome alignment software “Mauve”. Information from the genome alignments generated from Mauve (Reference *E. coli* BL21, OSB1, and OSB2) were incorporated into the algorithm while mapping the genes onto the full genome sequences of OSB1 and OSB2. [Check the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/4_annotation_transfer)
 
-Consequently, we have a list of genes that were found to be exact matches onto the *E. coli* BL21 reference genome. The rest that did not were deemed as the genes that had accumulated mutations (hence, matches were not found). These mutations include mutations like frameshift, indels, SNPs. [Check the files here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/4_annotation_transfer)
+Consequently, we have a list of genes that were found to be exact matches onto the *E. coli* BL21 reference genome. The rest that did not were deemed as the genes that had accumulated mutations (hence, matches were not found). These mutations include mutations like frameshift, indels, SNPs. [Check the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/4_annotation_transfer)
 
 We use [DAVID Bioinformatics](https://david.ncifcrf.gov/tools.jsp) to find out associated pathways (GO) as well as a broader KEGG-based pathway annotations for the genes that were found mutated in OSB 1 and OSB 2. So, the final file comprises the following information:
 
@@ -109,4 +109,4 @@ We use [DAVID Bioinformatics](https://david.ncifcrf.gov/tools.jsp) to find out a
 
 Other notable information in the files include the GO identifiers (e.g., GO:0046942) that can be used to directly access a pathway’s respective information from the NCBI. Under the KEGG column, identifiers such as eco02010:ABC transporters redirect the KEGG page to the elaborate pathways that particular gene is involved in.
 
-Our work is based on this data that comprises a list of genes (both in OSB1 and OSB2) holding mutations and are specifically involved in export, secretion, and are a part of membrane entities.[See the files here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/6_mutations_in_secretory_pathway_proteins)
+Our work is based on this data that comprises a list of genes (both in OSB1 and OSB2) holding mutations and are specifically involved in export, secretion, and are a part of membrane entities.[See the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/6_mutations_in_secretory_pathway_proteins)
