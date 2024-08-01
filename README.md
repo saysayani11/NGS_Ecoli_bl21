@@ -188,18 +188,26 @@ For each block in `blocks`:
 Return `mapped_genes`
 
 ## 5. Parse the alignment file
+
+This step should be easy:
 - Call `parse_alignment_file` with `alignment_file_path` to get `alignment_blocks`
 - Print the number of parsed alignment blocks
 
 ## 6. Parse the JSONL file
+
+This too:
 - Call `parse_jsonl` with `jsonl_file_path` to get `genes_data`
 - Print the number of parsed genes
 
 ## 7.Convert genes data to a DataFrame
+
+Once we have the data in place, we need to put it into a structured and readable format (like a DataFrame).
 - Convert `genes_data` to DataFrame `genes_df`
 - Print the head of `genes_df`
 
 ## 8. Map alignment blocks to genes
+
+The mapping of genes happens here.
 - Call `map_blocks_to_genes` with `alignment_blocks` and `genes_df` to get `mapped_genes`
 - Print the number of mapped blocks to genes
 
