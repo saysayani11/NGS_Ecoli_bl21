@@ -102,15 +102,17 @@ Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
     ```
 # Genome Alignment: Ecoli BL21 (Reference), OSB 1 and OSB 2
 
-We use Mauve to align the 3 sequences, one being the reference sequence of E coli BL21 downloaded from the NCBI. Based on the NCBI search hits, we choose to use the E coli BL21 sequenced and submitted by New England Biolabs. 
--Organism: Escherichia coli
--Infraspecific name: Strain: BL21 
--Submitter: New England Biolabs
--Date: May 26, 2020
--Assembly level: Complete Genome
--Genome representation: full
--GenBank assembly accession: GCA_013166975.1
--RefSeq assembly accession: GCF_013166975.1 
+We use Mauve to align the three sequences, one being the reference sequence of *E. coli* BL21 downloaded from the NCBI. Based on the NCBI search hits, we choose to use the *E. coli* BL21 sequenced and submitted by New England Biolabs.
+
+- Organism: *Escherichia coli*
+- Infraspecific name: Strain: BL21
+- Submitter: New England Biolabs
+- Date: May 26, 2020
+- Assembly level: Complete Genome
+- Genome representation: full
+- GenBank assembly accession: GCA_013166975.1
+- RefSeq assembly accession: GCF_013166975.1
+
  
 # Gene Annotation & Transfer
 
