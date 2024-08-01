@@ -135,5 +135,58 @@ Other notable information in the files include the GO identifiers (e.g., GO:0046
 
 Our work is based on this data that comprises a list of genes (both in OSB1 and OSB2) holding mutations and are specifically involved in export, secretion, and are a part of membrane entities.[See the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/6_mutations_in_secretory_pathway_proteins)
 
-# Algorithm for annotation transfer
+# Pseudocode for Transferring Annotations
 
+## Define paths to the files
+- Define `alignment_file_path`
+- Define `jsonl_file_path`
+- Define `output_file_path`
+
+## Function to read and parse the alignment file
+Open file at `file_path` for reading:
+    For each line in file:
+        If line matches `block_pattern`:
+            If `current_block` exists:
+                Append `current_block` to `blocks`
+            Initialize `current_block` with matched data
+        Else if `current_block` exists:
+            Append line to `current_block`'s sequence
+    
+    If `current_block` exists:
+        Append `current_block` to `blocks`
+
+Return `blocks`
+
+Open file at `file_path` for reading:
+    For each line in file:
+        Parse line as JSON to `gene_data`
+        For each region in `gene_data.genomicRegions`:
+            Extract and normalize gene information
+            Append gene information to `genes`
+
+Return `genes`
+
+For each block in `blocks`:
+    Find overlapping genes in `genes_df`
+    Append block and corresponding genes to `mapped_genes`
+
+Return `mapped_genes`
+
+
+## Parse the alignment file
+- Call `parse_alignment_file` with `alignment_file_path` to get `alignment_blocks`
+- Print the number of parsed alignment blocks
+
+## Parse the JSONL file
+- Call `parse_jsonl` with `jsonl_file_path` to get `genes_data`
+- Print the number of parsed genes
+
+## Convert genes data to a DataFrame
+- Convert `genes_data` to DataFrame `genes_df`
+- Print the head of `genes_df`
+
+## Map alignment blocks to genes
+- Call `map_blocks_to_genes` with `alignment_blocks` and `genes_df` to get `mapped_genes`
+- Print the number of mapped blocks to genes
+
+## Save the results to a CSV file
