@@ -137,18 +137,19 @@ Our work is based on this data that comprises a list of genes (both in OSB1 and 
 
 # Pseudocode for Transferring Annotations
 
-## Define paths to the files
+## 1. Define paths to the files
 
 The files we will be using are the .alignment and the jsonl file from the NCBI-downloaded E coli BL21 assembly folder.
 - Define `alignment_file_path`
 - Define `jsonl_file_path`
 - Define `output_file_path`
 
+## 2. Function to read and parse the alignment file
+
 The alignment file has a unique, neat format. It's contents are formatted into "alignment blocks" that (typically) starts with a ">" and end with a "=". Headers of each alignment blocks give information about the sequence, the orientation of alignment (+/-), and the region (start, stop in basepairs) of alignment.
 
-Towards the end of the alignment file, (approximately line number 170791, if youre using text editor in Ubuntu 22), lists the (sub)sequences that do not have a corresponding alignment to it. These are of particular importance to us because this gives information on the "extras" of OSB 1 and OSB 2. For now, we will parse the alignment file in the following function:
+Towards the end of the alignment file, (approximately line number 170791, if youre using text editor in Ubuntu 22), lists the (sub)sequences that do not have a corresponding alignment to it. These are of particular importance to us because this gives information on the "extras" of OSB 1 and OSB 2. For now, we will parse the alignment file in the following function that will fetch us all the alignment blocks:
 
-## Function to read and parse the alignment file
 Open file at `file_path` for reading:
     For each line in file:
         If line matches `block_pattern`:
@@ -163,8 +164,9 @@ Open file at `file_path` for reading:
 
 Return `blocks`
 
-Where do we pick the genome annotations from? There may be several ways, but for simplicity, we turn back to out genome assembly file for E coli BL21 from NCBI. 
-## Function to parse the JSONL file and extract gene coordinates
+## 3. Function to parse the JSONL file and extract gene coordinates
+
+Where do we pick the genome annotations from? There may be several ways, but for simplicity, we turn back to our genome assembly file for E coli BL21 from NCBI. An assembly file (typically) will have a jsonl formatted file comprising the gene annotations, and a .fna file that comprises the sequences for each gene. This is a lot of information that can be put to use. We will now parse the jsonl file to fetch the genes:
 
 Open file at `file_path` for reading:
     For each line in file:
@@ -175,9 +177,9 @@ Open file at `file_path` for reading:
 
 Return `genes`
 
+## 4. Function to map alignment blocks to genes
 
-## Function to map alignment blocks to genes
-
+This step is crucial. The purpose of this function is to map each alignment block to the genes that overlap with it, based on their genomic coordinates. The result is a list of dictionaries, each containing a block and its corresponding overlapping genes. This mapping is useful for understanding which genes are potentially affected by the sequences within each alignment block.
 
 For each block in `blocks`:
     Find overlapping genes in `genes_df`
@@ -185,26 +187,25 @@ For each block in `blocks`:
 
 Return `mapped_genes`
 
-
-## Parse the alignment file
+## 5. Parse the alignment file
 - Call `parse_alignment_file` with `alignment_file_path` to get `alignment_blocks`
 - Print the number of parsed alignment blocks
 
-## Parse the JSONL file
+## 6. Parse the JSONL file
 - Call `parse_jsonl` with `jsonl_file_path` to get `genes_data`
 - Print the number of parsed genes
 
-## Convert genes data to a DataFrame
+## 7.Convert genes data to a DataFrame
 - Convert `genes_data` to DataFrame `genes_df`
 - Print the head of `genes_df`
 
-## Map alignment blocks to genes
+## 8. Map alignment blocks to genes
 - Call `map_blocks_to_genes` with `alignment_blocks` and `genes_df` to get `mapped_genes`
 - Print the number of mapped blocks to genes
 
-## Save the results to a CSV file
+## 9. Save the results to a CSV file
 
-## Group by sequence and identify unique genes
+## 10. Group by sequence and identify unique genes
 - Group `mapped_genes_df` by `Gene_Seqname` and get unique `Gene_Symbol` for each group
 - Save the unique genes for each sequence to `unique_genes_per_sequence.csv`
 
