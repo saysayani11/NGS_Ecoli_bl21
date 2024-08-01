@@ -42,7 +42,7 @@ E. coli strains like BL21(DE3) are used for recombinant RNA/protein expression d
 4. Compatible with various expression vectors, such as pET vectors, enhancing protein expression, purification, and detection.
 
 ## 3. Applications
-E. coli BL21 is a widely used strain in biotechnology and molecular biology due to its proficiency in protein expression. One of its primary applications is in the production of recombinant proteins, where its genetic modifications facilitate high-yield expression and simplified purification processes. E. coli BL21 is engineered to lack proteases that can degrade expressed proteins, enhancing the stability and integrity of the products. It is also commonly utilized in the synthesis of enzymes, therapeutic proteins, and industrial biocatalysts. Additionally, its robust growth characteristics and well-understood genetics make it a valuable tool for research and development in various fields, including pharmaceuticals, agriculture, and bioengineering. The strain's compatibility with various expression vectors and its ability to perform post-translational modifications, albeit limited compared to eukaryotic systems, further expand its utility in the production of complex proteins.
+E. coli BL21 is widely used strain in biotechnology and molecular biology due to its proficiency in protein expression. One of its primary applications is in the production of recombinant proteins, where its genetic modifications facilitate high-yield expression and simplified purification processes. As I mentioned before, E coli BL21 is "engineered" to lack proteases that can degrade expressed proteins, enhancing the stability and integrity of the products. It is also commonly utilized in the synthesis of enzymes, therapeutic proteins, and industrial biocatalysts. Additionally, its robust growth characteristics and well-understood genetics make it a valuable tool for research and development in various fields, including pharmaceuticals, agriculture, and bioengineering. E coli's compatibility with various expression vectors and its ability to perform post-translational modifications, albeit limited compared to eukaryotic systems, further expand its utility in the production of complex proteins.
 
 # Statement of Problem
 
@@ -111,3 +111,6 @@ We use [DAVID Bioinformatics](https://david.ncifcrf.gov/tools.jsp) to find out a
 Other notable information in the files include the GO identifiers (e.g., GO:0046942) that can be used to directly access a pathway’s respective information from the NCBI. Under the KEGG column, identifiers such as eco02010:ABC transporters redirect the KEGG page to the elaborate pathways that particular gene is involved in.
 
 Our work is based on this data that comprises a list of genes (both in OSB1 and OSB2) holding mutations and are specifically involved in export, secretion, and are a part of membrane entities.[See the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/6_mutations_in_secretory_pathway_proteins)
+
+# Algorithm for annotation transfer
+
