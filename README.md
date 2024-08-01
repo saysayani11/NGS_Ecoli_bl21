@@ -43,3 +43,8 @@ E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein exp
 ## 3. Applications
 1. High yield production of recombinant proteins for structural studies, biochemical analyses, and initial protein characterization.
 
+# Statement of Problem
+
+# Gene Annotation Transfer
+
+# Installing & using MAUVE for genome alignment
