@@ -45,6 +45,12 @@ E. coli strains like BL21(DE3) are used for recombinant RNA/protein expression d
 E. coli BL21 is widely used strain in biotechnology and molecular biology due to its proficiency in protein expression. One of its primary applications is in the production of recombinant proteins, where its genetic modifications facilitate high-yield expression and simplified purification processes. As I mentioned before, E coli BL21 is "engineered" to lack proteases that can degrade expressed proteins, enhancing the stability and integrity of the products. It is also commonly utilized in the synthesis of enzymes, therapeutic proteins, and industrial biocatalysts. Additionally, its robust growth characteristics and well-understood genetics make it a valuable tool for research and development in various fields, including pharmaceuticals, agriculture, and bioengineering. E coli's compatibility with various expression vectors and its ability to perform post-translational modifications, albeit limited compared to eukaryotic systems, further expand its utility in the production of complex proteins.
 
 # Statement of Problem
+We have two mutated sequences of *E. coli* BL21, we call them OSB1 and OSB2. Our goal is to understand their exceptional export mechanism, in spite of accumulated mutations. Some questions we would like to answer are:
+
+- What are the regions in which it acquired its mutations?
+- Given the mutations they accumulated, what are the genes and their respective pathways that have a probability to affect processes like secretion and cellular export?
+- Are there inserts that consist of duplicates of export genes?
+
 
 # Installing & Using MAUVE for Genome Alignment
 
