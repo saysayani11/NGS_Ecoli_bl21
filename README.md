@@ -1,15 +1,6 @@
 # E. coli BL21: Introduction
 Our Lab loves E coli BL21! We are a group of people in science collectively using (and ab-using) E coli BL21 for several of its features which I'm going to summarize in the next section. 
-
-## Table of Contents
-1. [Overview](#overview)
-2. [Genetic Features](#genetic-features)
-    - [T7 RNA Polymerase and T7 Expression System](#t7-rna-polymerase-and-t7-expression-system)
-    - [Lacking Lon and OmpT Proteases](#lacking-lon-and-ompt-proteases)
-    - [Transformation Efficiency and Genetic Manipulation](#transformation-efficiency-and-genetic-manipulation)
-    - [Growth Characteristics](#growth-characteristics)
-3. [Applications](#applications)
-
+ 
 ## 1. Overview
 E. coli strains like BL21(DE3) are used for recombinant RNA/protein expression due to their genetic features. These strains lack proteolytic activity and have a T7 RNA polymerase gene controlled by the lacUV5 promoter.
 
