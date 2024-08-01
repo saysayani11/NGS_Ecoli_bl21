@@ -45,10 +45,9 @@ E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein exp
 
 # Statement of Problem
 
-# Gene Annotation Transfer
 # Installing & Using MAUVE for Genome Alignment
 
-MAUVE is a multiple genome alignment tool that is hosted at the [Darling Lab](https://darlinglab.org/mauve/mauve.html) at the University of Technology Sydney. It is no longer maintained but remains freely available for users. A basic requirement for Mauve is Java version 1.4 or later (so, make sure Java is up and set to path!). Mauve is available for download on Windows, Linux, and Mac OS X 10.7+ at [Mauve's page](https://darlinglab.org/mauve/download.html). Follow through the instructions and it should be easy to set up Mauve.
+MAUVE is a multiple genome alignment tool that is hosted at the [Darling Lab](https://darlinglab.org/mauve/mauve.html) at the University of Technology Sydney. It is no longer maintained but remains to be freely available for users. A basic requirement for Mauve is Java version 1.4 or later (so, make sure Java is up and set to path!). Mauve is available for download on Windows, Linux, and Mac OS X 10.7+ at [Mauve's page](https://darlinglab.org/mauve/download.html). Follow through the instructions and it should be easy to set up Mauve.
 
 Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
 
@@ -94,7 +93,20 @@ Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
     ```bash
     ./mauve
     ```
+# Gene Annotation & Transfer
 
+Gene annotations were obtained using in-house Python codes to “map and transfer” annotations of *E. coli* BL21 (taken from the NCBI), which were then used as feed for genome alignment software “Mauve”. Information from the genome alignments generated from Mauve (Reference *E. coli* BL21, OSB1, and OSB2) were incorporated into the algorithm while mapping the genes onto the full genome sequences of OSB1 and OSB2.
 
+Consequently, we have a list of genes that were found to be exact matches onto the *E. coli* BL21 reference genome. The rest that did not were deemed as the genes that had accumulated mutations (hence, matches were not found). These mutations include mutations like frameshift, indels, SNPs.
 
+This current data comprises a list of genes that (both in OSB1 and OSB2) hold mutations and are specifically involved in export, secretion, and are a part of membrane entities. Along with it, their associated pathway (GO) as well as a broader KEGG-based pathway annotation has been added.
 
+So, the final file comprises the following information:
+
+- **Gene ID:** Gene ID refers to a unique identifier assigned to a gene.
+- **Gene Name:** The gene name is a descriptive label given to a gene, usually indicating its function or a characteristic feature.
+- **Pathways involved:** This refers to the specific biological pathways in which the gene is known to participate. Biological pathways are a series of actions among molecules in a cell that lead to a certain product or change in the cell, such as the glycolysis pathway or the TCA cycle.
+- **KEGG based broader pathway classification:** KEGG (Kyoto Encyclopedia of Genes and Genomes) is a comprehensive database resource that provides information on the functions and utilities of the biological system. Broader pathway classification refers to the categorization of genes based on KEGG's detailed pathway maps, which include metabolism, genetic information processing, environmental information processing, and more.
+- **Cellular localization:** Cellular localization describes the specific location within the cell where the gene product (usually a protein) is found. This can include locations such as the cytoplasm, nucleus, mitochondria, plasma membrane, or extracellular space.
+
+Other notable information in the files include the GO identifiers (e.g., GO:0046942) that can be used to directly access a pathway’s respective information from the NCBI. Under the KEGG column, identifiers such as eco02010:ABC transporters redirect the KEGG page to the elaborate pathways that particular gene is involved in.
