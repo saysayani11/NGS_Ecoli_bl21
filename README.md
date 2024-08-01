@@ -223,5 +223,4 @@ For fetching the inserts, we will go back to the .alignment file. THe file will 
 
 The inserts in our genomes are now fairly annotated. This point onwards, one can conduct several analysis. Our goal is to figure out what comprises these inserts. What is the EXTRA?
 
-$ Duplicates & new regions?
 
