@@ -142,10 +142,6 @@ Our work is based on this data that comprises a list of genes (both in OSB1 and 
 - Define `jsonl_file_path`
 - Define `output_file_path`
 
-Function parse_alignment_file(file_path):
-Initialize empty list blocks
-Initialize current_block as None
-Define block_pattern as regex pattern to match block lines
 
 ## Function to read and parse the alignment file
 Open file at `file_path` for reading:
@@ -164,9 +160,6 @@ Return `blocks`
 
 ## Function to parse the JSONL file and extract gene coordinates
 
-Function parse_jsonl(file_path):
-Initialize empty list genes
-
 Open file at `file_path` for reading:
     For each line in file:
         Parse line as JSON to `gene_data`
@@ -179,8 +172,6 @@ Return `genes`
 
 ## Function to map alignment blocks to genes
 
-Function map_blocks_to_genes(blocks, genes_df):
-Initialize empty list mapped_genes
 
 For each block in `blocks`:
     Find overlapping genes in `genes_df`
@@ -206,15 +197,6 @@ Return `mapped_genes`
 - Print the number of mapped blocks to genes
 
 ## Save the results to a CSV file
-
-Initialize empty list mapped_genes_list
-For each item in mapped_genes:
-For each gene in item's genes:
-Append block and gene information to mapped_genes_list
-Convert mapped_genes_list to DataFrame mapped_genes_df
-Print the head of mapped_genes_df
-Save mapped_genes_df to output_file_path
-
 
 ## Group by sequence and identify unique genes
 - Group `mapped_genes_df` by `Gene_Seqname` and get unique `Gene_Symbol` for each group
