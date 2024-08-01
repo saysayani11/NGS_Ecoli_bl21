@@ -47,4 +47,14 @@ E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein exp
 
 # Gene Annotation Transfer
 
-# Installing & using MAUVE for genome alignment
+# Installing & Using MAUVE for Genome Alignment
+
+MAUVE is a multiple genome alignment tool that is hosted at the [Darling Lab](https://darlinglab.org/mauve/mauve.html) at the University of Technology Sydney. It is no longer maintained but remains freely available for users. A basic requirement for Mauve is Java version 1.4 or later (so, make sure Java is up and set to path!). Mauve is available for download on Windows, Linux and Lac OS X 10.7+ at [Mauve's page](https://darlinglab.org/mauve/download.html). Follow through the instructions and it should be easy to set up Mauve. 
+
+Here's a sumamry of how I would usually do it on my Ubuntu 22.04 workstation: 
+
+1. MAUVE requires Java and other libraries to run. First, ensure you have Java installed:
+2. If no, install all the dependencies
+3. Download & extract Mauve into your preferred location
+4. Install & Run
+
