@@ -127,6 +127,7 @@ Other notable information in the files include the GO identifiers (e.g., GO:0046
 Our work is based on this data that comprises a list of genes (both in OSB1 and OSB2) holding mutations and are specifically involved in export, secretion, and are a part of membrane entities.[See the files here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/6_mutations_in_secretory_pathway_proteins)
 
 # Pseudocode for Transferring Annotations
+The script is in the main repo and here is a breakdown of how the scrip works:
 
 ## 1. Define paths to the files
 
@@ -214,9 +215,9 @@ The mapping of genes happens here.
 
 Genomic islands are large, distinct segments of DNA that are part of the genome of some bacteria and archaea.  They are typically acquired through horizontal gene transfer (HGT) from other organisms. GIs often contain clusters of genes that confer specific advantages to the host, such as antibiotic resistance, virulence factors, metabolic pathways, or symbiosis-related functions. GIs are integrated into the host genome and can be identified by their distinct sequence features, such as different GC content compared to the rest of the genome, presence of mobility genes (e.g., integrases, transposases), and flanking direct repeats.
 
-Genome inserts, on the otehr hand refer to any segment of DNA that has been inserted into a genome. This term is more general and can apply to any organism and any context of insertion, including natural processes and laboratory manipulations. Genome inserts can vary widely in size, from a single gene to large segments of DNA. The inserted DNA can be of various origins, including viral DNA, plasmid DNA, transposons, or experimentally inserted sequences (such as those introduced by genetic engineering). Inserts can be naturally integrated via HGT, viral infection, or experimentally using techniques like CRISPR, transposase systems, or recombination-based methods.
+Genome inserts, on the other hand refer to any segment of DNA that has been inserted into a genome. This term is more general and can apply to any organism and any context of insertion, including natural processes and laboratory manipulations. Genome inserts can vary widely in size, from a single gene to large segments of DNA. The inserted DNA can be of various origins, including viral DNA, plasmid DNA, transposons, or experimentally inserted sequences (such as those introduced by genetic engineering). Inserts can be naturally integrated via HGT, viral infection, or experimentally using techniques like CRISPR, transposase systems, or recombination-based methods.
 
-Fetching genomic islands is pretty easy and straight-forward. You just have to parse the file from Mauve results directory and perform a BLASTx to find out what those genes do. For obvious reasons, we grouped them in sequence that are larger than 250 base pairs and less than 250 base pairs; the results of which are summarised in the .pptx file in this repo. [See here]().
+Fetching genomic islands is pretty easy and straight-forward. You just have to parse the file from Mauve results directory and perform a BLASTx to find out what those genes do. For obvious reasons, we grouped them in sequence that are larger than 250 base pairs and less than 250 base pairs; the results of which are summarised in the .pptx file in this repo.
 
 For fetching the inserts, we will go back to the .alignment file. THe file will need a litter processing, most times. We extract data, line 170791 onwards (it may be a different line number on your app) which gives the inserts in OSB 1 and OSB 2. We BLASTx these sequences to understand what do the code for. 
 
