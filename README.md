@@ -46,30 +46,55 @@ E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein exp
 # Statement of Problem
 
 # Gene Annotation Transfer
-
 # Installing & Using MAUVE for Genome Alignment
 
-MAUVE is a multiple genome alignment tool that is hosted at the [Darling Lab](https://darlinglab.org/mauve/mauve.html) at the University of Technology Sydney. It is no longer maintained but remains freely available for users. A basic requirement for Mauve is Java version 1.4 or later (so, make sure Java is up and set to path!). Mauve is available for download on Windows, Linux and Lac OS X 10.7+ at [Mauve's page](https://darlinglab.org/mauve/download.html). Follow through the instructions and it should be easy to set up Mauve. 
+MAUVE is a multiple genome alignment tool that is hosted at the [Darling Lab](https://darlinglab.org/mauve/mauve.html) at the University of Technology Sydney. It is no longer maintained but remains freely available for users. A basic requirement for Mauve is Java version 1.4 or later (so, make sure Java is up and set to path!). Mauve is available for download on Windows, Linux, and Mac OS X 10.7+ at [Mauve's page](https://darlinglab.org/mauve/download.html). Follow through the instructions and it should be easy to set up Mauve.
 
-Here's a sumamry of how I would usually do it on my Ubuntu 22.04 workstation: 
+Here's a summary of how I would usually do it on my Ubuntu 22.04 workstation:
 
 1. MAUVE requires Java and other libraries to run. First, ensure you have Java installed:
-java -version
 
-2. If no, install all the dependencies. I will provide the dirty installion here. You should go to ]Oracle's Java website](https://www.oracle.com/java/technologies/downloads/?er=221886) and download one.
-   
-sudo apt-get install default-jre
-sudo apt-get install default-jdk
+    ```bash
+    java -version
+    ```
 
-3. Download, extract & run Mauve
+2. If not, install all the dependencies. I will provide the dirty installation here. You should go to [Oracle's Java website](https://www.oracle.com/java/technologies/downloads/?er=221886) and download one.
 
-There are two ways you can do this: one, download from the website and two, use 'wget' to download it directly.
-Way one: Download a tarball from the Download page.
-Way two: Clone: wget http://darlinglab.org/mauve/snapshots/latest/mauveSnapshot_2015-02-13_linux-x64.tar.gz
+    ```bash
+    sudo apt-get install default-jre
+    sudo apt-get install default-jdk
+    ```
 
-Extract: tar -xvzf mauveSnapshot_2015-02-13_linux-x64.tar.gz
-Navigate to the Mauve directory: cd mauveSnapshot_2015-02-13
-Run: ./mauve
+3. Download, extract & run Mauve:
+
+    There are two ways you can do this: one, download from the website and two, use 'wget' to download it directly.
+
+    **Way one:** Download a tarball from the Download page.
+
+    **Way two:** Clone using wget:
+
+    ```bash
+    wget http://darlinglab.org/mauve/snapshots/latest/mauveSnapshot_2015-02-13_linux-x64.tar.gz
+    ```
+
+    Extract:
+
+    ```bash
+    tar -xvzf mauveSnapshot_2015-02-13_linux-x64.tar.gz
+    ```
+
+    Navigate to the Mauve directory:
+
+    ```bash
+    cd mauveSnapshot_2015-02-13
+    ```
+
+    Run:
+
+    ```bash
+    ./mauve
+    ```
+
 
 
 
