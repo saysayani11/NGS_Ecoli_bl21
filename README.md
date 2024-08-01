@@ -45,7 +45,7 @@ E. coli strains like BL21(DE3) are used for recombinant RNA/protein expression d
 E. coli BL21 is widely used strain in biotechnology and molecular biology due to its proficiency in protein expression. One of its primary applications is in the production of recombinant proteins, where its genetic modifications facilitate high-yield expression and simplified purification processes. As I mentioned before, E coli BL21 is "engineered" to lack proteases that can degrade expressed proteins, enhancing the stability and integrity of the products. It is also commonly utilized in the synthesis of enzymes, therapeutic proteins, and industrial biocatalysts. Additionally, its robust growth characteristics and well-understood genetics make it a valuable tool for research and development in various fields, including pharmaceuticals, agriculture, and bioengineering. E coli's compatibility with various expression vectors and its ability to perform post-translational modifications, albeit limited compared to eukaryotic systems, further expand its utility in the production of complex proteins.
 
 # Statement of Problem
-We have two mutated sequences of *E. coli* BL21, we call them OSB1 and OSB2. Our goal is to understand their exceptional export mechanism, in spite of accumulated mutations. Some questions we would like to answer are:
+We have two mutated sequences of *E. coli* BL21, we call them OSB1 and OSB2. Our sequencing results show that OSB 1 has an additional 78412 bp worth of insertion in its genome and OSB 2 has additional 140,511bp worth of insertion. The E coli BL21 full genome as in the NCBI is of 4,529,413 bp as compared to OSB 1 (4,607,825 bp) and OSB 2 (4,669,924 bp). Our goal is to understand their exceptional export mechanism, in spite of accumulated mutations. Some questions we would like to answer are:
 
 - What are the regions in which it acquired its mutations?
 - Given the mutations they accumulated, what are the genes and their respective pathways that have a probability to affect processes like secretion and cellular export?
@@ -218,3 +218,18 @@ The mapping of genes happens here.
 - Save the unique genes for each sequence to `unique_genes_per_sequence.csv`
 
 - Print the output file path for the unique genes per sequence
+  
+# Identifying genomic islands and inserts
+
+Genomic islands are large, distinct segments of DNA that are part of the genome of some bacteria and archaea.  They are typically acquired through horizontal gene transfer (HGT) from other organisms. GIs often contain clusters of genes that confer specific advantages to the host, such as antibiotic resistance, virulence factors, metabolic pathways, or symbiosis-related functions. GIs are integrated into the host genome and can be identified by their distinct sequence features, such as different GC content compared to the rest of the genome, presence of mobility genes (e.g., integrases, transposases), and flanking direct repeats.
+
+Genome inserts, on the otehr hand refer to any segment of DNA that has been inserted into a genome. This term is more general and can apply to any organism and any context of insertion, including natural processes and laboratory manipulations. Genome inserts can vary widely in size, from a single gene to large segments of DNA. The inserted DNA can be of various origins, including viral DNA, plasmid DNA, transposons, or experimentally inserted sequences (such as those introduced by genetic engineering). Inserts can be naturally integrated via HGT, viral infection, or experimentally using techniques like CRISPR, transposase systems, or recombination-based methods.
+
+Fetching genomic islands is pretty easy and straight-forward. You just have to parse the file from Mauve results directory and perform a BLASTx to find out what those genes do. For obvious reasons, we grouped them in sequence that are larger than 250 base pairs and less than 250 base pairs; the results of which are summarised in the .pptx file in this repo. [See here]().
+
+For fetching the inserts, we will go back to the .alignment file. THe file will need a litter processing, most times. We extract data, line 170791 onwards (it may be a different line number on your app) which gives the inserts in OSB 1 and OSB 2. We BLASTx these sequences to understand what do the code for. 
+
+The inserts in our genomes are now fairly annotated. This point onwards, one can conduct several analysis. Our goal is to figure out what comprises these inserts. What is the EXTRA?
+
+$ Duplicates & new regions?
+
