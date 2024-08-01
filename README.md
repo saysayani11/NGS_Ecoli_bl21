@@ -138,10 +138,15 @@ Our work is based on this data that comprises a list of genes (both in OSB1 and 
 # Pseudocode for Transferring Annotations
 
 ## Define paths to the files
+
+The files we will be using are the .alignment and the jsonl file from the NCBI-downloaded E coli BL21 assembly folder.
 - Define `alignment_file_path`
 - Define `jsonl_file_path`
 - Define `output_file_path`
 
+The alignment file has a unique, neat format. It's contents are formatted into "alignment blocks" that (typically) starts with a ">" and end with a "=". Headers of each alignment blocks give information about the sequence, the orientation of alignment (+/-), and the region (start, stop in basepairs) of alignment.
+
+Towards the end of the alignment file, (approximately line number 170791, if youre using text editor in Ubuntu 22), lists the (sub)sequences that do not have a corresponding alignment to it. These are of particular importance to us because this gives information on the "extras" of OSB 1 and OSB 2. For now, we will parse the alignment file in the following function:
 
 ## Function to read and parse the alignment file
 Open file at `file_path` for reading:
@@ -158,6 +163,7 @@ Open file at `file_path` for reading:
 
 Return `blocks`
 
+Where do we pick the genome annotations from? There may be several ways, but for simplicity, we turn back to out genome assembly file for E coli BL21 from NCBI. 
 ## Function to parse the JSONL file and extract gene coordinates
 
 Open file at `file_path` for reading:
