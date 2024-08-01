@@ -114,10 +114,8 @@ We use Mauve to align the three sequences, one being the reference sequence of *
 - RefSeq assembly accession: GCF_013166975.1
 
 
-You should find a copy of OSB1 and OSB2 genomes in the repo itself. For reference purposes, the genome assembly file for *E. coli* BL21 full genome is copied into this repo. Check for the files [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/1_sequences) and [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/2_ncbi_dataset_full_genome). The fasta files would be all you need to build a basic alignment like this.
+You should find a copy of OSB1 and OSB2 genomes in the repo itself. For reference purposes, the genome assembly file for *E. coli* BL21 full genome is copied into this repo. Check for the files [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/1_sequences) and [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/2_ncbi_dataset_full_genome). The fasta files would be all you need to build a basic alignment. Mauve creates 5 files: (a) A log (b) a .alignment that contains information on the aligned regions and unique regions that doesnt have any match (c) a .backbone file (d) a guide tree file and lastly, (e) A .islands file. We are going to use the .alignment and the .islands file.
 
-![Alignment Image](https://raw.githubusercontent.com/saysayani11/NGS_Ecoli_bl21/main/mauve_alignment.png
-)
  
 # Gene Annotation & Transfer
 
