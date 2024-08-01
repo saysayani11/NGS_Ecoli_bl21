@@ -1,4 +1,5 @@
 # E. coli BL21: Introduction
+Our Lab loves E coli BL21! We are a group of people in science collectively using (and ab-using) E coli BL21 for several of its features which I'm going to summarize in the next section. 
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -10,7 +11,7 @@
 3. [Applications](#applications)
 
 ## 1. Overview
-E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein expression due to their genetic features. These strains lack proteolytic activity and have a T7 RNA polymerase gene controlled by the lacUV5 promoter.
+E. coli strains like BL21(DE3) are used for recombinant RNA/protein expression due to their genetic features. These strains lack proteolytic activity and have a T7 RNA polymerase gene controlled by the lacUV5 promoter.
 
 ## 2. Genetic Features
 
@@ -41,7 +42,7 @@ E. coli strains like BL21(DE3) and DL39 are used for recombinant RNA/protein exp
 4. Compatible with various expression vectors, such as pET vectors, enhancing protein expression, purification, and detection.
 
 ## 3. Applications
-1. High yield production of recombinant proteins for structural studies, biochemical analyses, and initial protein characterization.
+E. coli BL21 is a widely used strain in biotechnology and molecular biology due to its proficiency in protein expression. One of its primary applications is in the production of recombinant proteins, where its genetic modifications facilitate high-yield expression and simplified purification processes. E. coli BL21 is engineered to lack proteases that can degrade expressed proteins, enhancing the stability and integrity of the products. It is also commonly utilized in the synthesis of enzymes, therapeutic proteins, and industrial biocatalysts. Additionally, its robust growth characteristics and well-understood genetics make it a valuable tool for research and development in various fields, including pharmaceuticals, agriculture, and bioengineering. The strain's compatibility with various expression vectors and its ability to perform post-translational modifications, albeit limited compared to eukaryotic systems, further expand its utility in the production of complex proteins.
 
 # Statement of Problem
 
