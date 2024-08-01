@@ -54,7 +54,22 @@ MAUVE is a multiple genome alignment tool that is hosted at the [Darling Lab](ht
 Here's a sumamry of how I would usually do it on my Ubuntu 22.04 workstation: 
 
 1. MAUVE requires Java and other libraries to run. First, ensure you have Java installed:
-2. If no, install all the dependencies
-3. Download & extract Mauve into your preferred location
-4. Install & Run
+java -version
+
+2. If no, install all the dependencies. I will provide the dirty installion here. You should go to ]Oracle's Java website](https://www.oracle.com/java/technologies/downloads/?er=221886) and download one.
+   
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+
+3. Download, extract & run Mauve
+
+There are two ways you can do this: one, download from the website and two, use 'wget' to download it directly.
+Way one: Download a tarball from the Download page.
+Way two: Clone: wget http://darlinglab.org/mauve/snapshots/latest/mauveSnapshot_2015-02-13_linux-x64.tar.gz
+
+Extract: tar -xvzf mauveSnapshot_2015-02-13_linux-x64.tar.gz
+Navigate to the Mauve directory: cd mauveSnapshot_2015-02-13
+Run: ./mauve
+
+
 
