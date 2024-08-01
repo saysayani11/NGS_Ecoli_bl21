@@ -113,7 +113,10 @@ We use Mauve to align the three sequences, one being the reference sequence of *
 - GenBank assembly accession: GCA_013166975.1
 - RefSeq assembly accession: GCF_013166975.1
 
-You should find a copy of OSB 1 and 2 genome in the repo itself. For reference purposes, the genome assembly file for E coli BL21 full genome is copied into this repo. Check for the files [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/1_sequences) and [here.](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/2_ncbi_dataset_full_genome)
+![Alignment Image](mauve_alignment.png)
+
+You should find a copy of OSB1 and OSB2 genomes in the repo itself. For reference purposes, the genome assembly file for *E. coli* BL21 full genome is copied into this repo. Check for the files [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/1_sequences) and [here](https://github.com/saysayani11/NGS_Ecoli_bl21/tree/main/2_ncbi_dataset_full_genome). The fasta files would be all you need to build a basic alignment like this.
+
  
 # Gene Annotation & Transfer
 
